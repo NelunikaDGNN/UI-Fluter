@@ -27,6 +27,8 @@ class HomeScreen extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: 'Search',
                 prefixIcon: Icon(Icons.search, color: Colors.grey[400]),
+                contentPadding: const EdgeInsets.symmetric(vertical: 6), // reduces height
+                isDense: true, // makes it more compact
               ),
             ),
           ),

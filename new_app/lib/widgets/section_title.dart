@@ -9,17 +9,29 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-     // same as AppBar
-    width: double.infinity,
-    padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-    child: Text(
-      '$title $count',
-      style: Theme.of(context).textTheme.titleMedium?.copyWith(
-            color: Colors.grey[400],
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+      child: Row(
+        children: [
+          Text(
+            title,
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  // color: Colors.white,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
           ),
-    ),
-  );
+          const SizedBox(width: 8),
+          Text(
+            '$count',
+            style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                  color: Colors.grey,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
+        ],
+      ),
+    );
   }
 }
